@@ -1,4 +1,20 @@
-<!--Creamos carpeta Templates(Pantillas) y creamos el archivo category.html-->
+{% extends "base.html" %}
+{% block section %}
+
+<h2> Category </h2>
+<hr>
+
+{% endblock section %}
+{% block maincontent %}
+	<div>
+		{% for c in object_list %}
+		<a href="">
+		{{ c.name }}
+		</a>
+		{% endfor %}
+	</div>
+{% endblock maincontent %}
+
 {{ object_list }}
 <h1> album </h1>
 <div>
@@ -8,3 +24,5 @@
 	</a>
 	{% endfor %}
 </div>
+
+<!--Creamos carpeta Templates(Pantillas) y creamos el archivo category.html -->
