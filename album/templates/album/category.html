@@ -1,0 +1,10 @@
+<!--Creamos carpeta Templates(Pantillas) y creamos el archivo category.html-->
+{{ object_list }}
+<h1> album </h1>
+<div>
+	{% for c in object_list %}
+	<a href="{% url 'category-detail' c.pk %}">
+		{{ c.name }}
+	</a>
+	{% endfor %}
+</div>
